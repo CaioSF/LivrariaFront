@@ -22,16 +22,15 @@ $('#form-editar-livro').submit(function (event) {
 
     //Criar formData
     var formData = {
-        'id': id_livro,
         'isbn': $('#input-isbn').val(),
+        'autor': $('#input-autor').val(),
+        'editora': $('#input-editora').val(),
+        'genero': $('#input-genero').val(),
         'nome': $('#input-nome').val(),
-        'dataLancamento': dataLancamento.toISOString(),
+        'numeroPaginas': $('#input-numeroPaginas').val(),
+        'idioma': $('#input-idioma').val(),
         'dataCadastro': new Date().toISOString(),
-        'idioma': $('input-idioma').val(),
-        'numeroPaginas': $('input-numeroPaginas').val(),
-        'genero': $('input-genero').val(),
-        'autor': $('input-autor').val(),
-        'editora': $('input-editora').val(),
+        'dataLancamento': dataLancamento.toISOString(),
     };
 
     console.log(JSON.stringify(formData));

@@ -20,75 +20,78 @@
 <body>
 
     <!-- Menu topo -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">SCL</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="listar-livro.html">livro <span class="sr-only">(current)</span></a>
-                </li>
-
-            </ul>
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="sair()">Sair</button>
-        </div>
+    <nav class="navbar bg-primary px-3 mb-3">
+        <a class="navbar-brand text-light" href="../index.html">SCL</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="visualizar-livro.html">Livros</a>
+            </li>
+            <a class="nav-link active">sair</a>
+        </ul>
     </nav>
+    
+    
+    <div class="container p-lg-0">
 
+    <h2>Inserir livro</h2>
 
+    <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
+        <a class="close" onclick="esconderAlert()">×</a>
+    </div>
 
-    <div class="container">
-        <h2>Inserir livro</h2>
+    <form id="form-inserir-livro" action="listar-livros.html">
 
-        <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
-            <a class="close" onclick="esconderAlert()">×</a>
+        <div class="form-group">
+            <label for="input-isbn">ISBN</label>
+            <input type="number" class="form-control" id="input-isbn" placeholder="isbn" maxlength="13">
         </div>
 
-        <form id="form-inserir-livro" action="listar-livros.html">
+        <div class="form-group">
+            <label for="input-autor">Autor</label>
+            <input type="text" class="form-control" id="input-autor" placeholder="Nome do Autor">
+        </div>
 
-            <div class="form-group">
-                <label for="input-isbn">ISBN</label>
-                <input type="number" class="form-control" id="input-isbn" placeholder="isbn">
-            </div>
-            
-            <div class="form-group">
-                <label for="input-autor">Autor</label>
-                <input type="text" class="form-control" id="input-autor" placeholder="Nome do Autor">
-            </div>
+        <div class="form-group">
+            <label for="input-editora">Editora</label>
+            <input type="text" class="form-control" id="input-editora" placeholder="Editora">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="button">Gênero</button>
+            <select class="form-select" id="input-genero" aria-label="Example select with button addon">
+                <option selected>Selecionar</option>
+                <option value="Literatura">Literatura</option>
+                <option value="Ficção">Ficção</option>
+                <option value="Filosofia">Filosofia</option>
+                <option value="Romance">Romance</option>
+                <option value="Não-Ficção">Não-Ficção</option>
+            </select>
+        </div>
 
-            <div class="form-group">
-                <label for="input-editora">Editora</label>
-                <input type="text" class="form-control" id="input-editora" placeholder="Editora">
-            </div>
-            <div class="form-group">
-                <label for="input-genero">Genero</label>
-                <input type="text" class="form-control" id="input-genero" placeholder="Genero">
-            </div>
+        <div class="form-group">
+            <label for="input-nome">Nome</label>
+            <input type="text" class="form-control" id="input-nome" placeholder="Nome do Livro">
+        </div>
+        <div class="form-group">
+            <label for="input-numeroPaginas">Páginas</label>
+            <input type="number" class="form-control" id="input-numeroPaginas" placeholder="Páginas">
+        </div>
+        <div class="form-group">
+            <label for="input-idioma">Idioma</label>
+            <input type="text" class="form-control" id="input-idioma" placeholder="Idioma">
+        </div>
 
-            <div class="form-group">
-                <label for="input-nome">Nome</label>
-                <input type="text" class="form-control" id="input-nome" placeholder="Nome do Livro">
-            </div>
-            <div class="form-group">
-                <label for="input-numeroPaginas">Páginas</label>
-                <input type="number" class="form-control" id="input-numeroPaginas" placeholder="Páginas">
-            </div>
-            <div class="form-group">
-                <label for="input-idioma">Idioma</label>
-                <input type="text" class="form-control" id="input-idioma" placeholder="Idioma">
-            </div>
-
-            <div class="form-group">
-                <label for="input-dataLancamento">Data de Publicação</label>
-                <input class="form-control" type="date" id="input-dataLancamento">
+        <div class="form-group">
+            <label for="input-dataLancamento">Data de Publicação</label>
+            <input class="form-control" type="date" id="input-dataLancamento">
 
             <hr>
-            <a class="btn btn-secondary" href="listar-livros.html" role="button">Voltar</a>
+            <a class="btn btn-secondary" href="../index.html"" role=" button">Voltar</a>
             <button type="submit" class="btn btn-primary">Salvar</button>
 
-        </form>
+    </form>
 
     </div>
 

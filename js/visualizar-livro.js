@@ -9,7 +9,7 @@ function GetURLParameter(sParam) {
     }
 }
 
-var id_livro = GetURLParameter("id");
+var id_aluno = GetURLParameter("id");
 
 function esconderAlert() {
     $('#div-alert-message').html("<a class='close' onclick='esconderAlert()'>×</a>");
@@ -30,20 +30,17 @@ function formatDate(date) {
     return [year, month, day].join('-');
 }
 
+
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:8080/api/livro/getById/' + id_livro,
+        url: 'http://localhost:8080/api/livro/getById/' + id_aluno,
         type: 'GET',
         dataType: 'json',
         success: function (data) {
-            $('#input-isbn').val(),
-            $('#input-nome').val(),
-            $('input-idioma').val(),
-            $('input-numeroPaginas').val(),
-            $('input-genero').val(),
-            $('input-autor').val(),
-            $('input-editora').val(),
+            $("#input-nome").val(data.nome);
+            $("#input-autor").val(data.autor);
             $("#input-dataLancamento").val(formatDate(new Date(data.dataLancamento)));
         }
-    });
+    })
+
 });

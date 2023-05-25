@@ -13,48 +13,46 @@
 
 <body>
     <!-- Menu topo -->
-    <div class="container">
-        <header
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <div class="col-md-3 mb-2 mb-md-0">
-                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    SCL
-                </a>
-            </div>
-
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="livro/listar-livro.html" class="nav-link px-2">Livros</a></li>
-                
-            </ul>
-
-            <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sair</button>
-            </div>
-        </header>
-    </div>
+    <nav class="navbar bg-primary px-3 mb-3">
+        <a class="navbar-brand text-light" href="../index.html">SCL</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/livro/listar-livro.html">Livros</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Login/Logout</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Login</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
 
     <!-- Conteúdo principal -->
     <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Painel SCL</h2>
+        <h2 class="pb-2 border-bottom">Painel de Livros</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
             <div class="col d-flex align-items-start">
-                <div
-                    class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                    <svg class="bi" width="1em" height="1em">
-                        <use xlink:href="#toggles2"></use>
-                    </svg>
-                </div>
+                
                 <div>
-                    <h3 class="fs-2">Livro</h3>
-                    <p>Total de livros cadastrados</p>
-                    <div id="div-total-livros" style="padding: 10px;">--</div>
-                    <a href="livro/listar-livro.html" class="btn btn-primary">
-                        Cadastro de livros
-                    </a>
-                </div>
+                    <div class="card">
+                        <img src=livros.png = "card-img-top" alt="...">
+                      
+                        <div class="card-body">
+                          <h5 class="card-title">Livros</h5>
+                          <p class="card-text">Gerenciamento de livros</p>
+                          <div id="div-total-livros" style="padding: 10px;"></div>
+                          <a href="livro/incluir-livro.html" class="btn btn-primary">Cadastrar Livro</a>
+                        </div>
+                      </div>
+                      
+                      
             </div>
            
                 

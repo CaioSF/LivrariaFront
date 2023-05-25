@@ -6,6 +6,7 @@ function onInit() {
         type: "get",
         dataType: "json",
         success: function(res) {
+           
            $("#div-total-livros").html(res);
         }
     });
