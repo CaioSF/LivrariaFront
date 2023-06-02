@@ -39,7 +39,11 @@ $(document).ready(function () {
         success: function (data) {
             $("#input-nome").val(data.nome);
             $("#input-autor").val(data.autor);
+            $("#input-genero").val(data.genero);
+            $("#input-editora").val(data.editora);
+            $("#input-numeroPaginas").val(data.numeroPaginas);
             $("#input-dataLancamento").val(formatDate(new Date(data.dataLancamento)));
+
         }
     })
 

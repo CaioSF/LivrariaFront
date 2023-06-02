@@ -45,7 +45,7 @@
         <form id="form-editar-livro" action="listar-livro.html">
             <div class="form-group">
                 <label for="input-isbn">ISBN</label>
-                <input type="number" class="form-control" id="input-isbn" placeholder="isbn">
+                <input type="number" class="form-control" id="input-isbn" placeholder="isbn" disabled>
             </div>
             
             <div class="form-group">
@@ -57,17 +57,16 @@
                 <label for="input-editora">Editora</label>
                 <input type="text" class="form-control" id="input-editora" placeholder="Editora">
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="button">Gênero</button>
-                <select class="form-select" id="input-genero" aria-label="Example select with button addon">
-                  <option  selected>Selecionar</option>
-                  <option value="Literatura">Literatura</option>
-                  <option value="Ficção">Ficção</option>
-                  <option value="Filosofia">Filosofia</option>
-                  <option value="Romance">Romance</option>
-                  <option value="Não-Ficção">Não-Ficção</option>
-                </select>
-              </div>
+            <div class="form-group"><label for="input-genero" class="form-group">Gênero</label>
+                <input class="form-control" list="datalistOptions" id="input-genero" placeholder="Digite o gênero">
+                <datalist id="datalistOptions">
+                    <option value="Ficção">
+                    <option value="Não-Ficção">
+                    <option value="Romance">
+                    <option value="Filosofia">
+                    <option value="Poesia">
+                    </datalist>
+            </div>
 
     
             <div class="form-group">

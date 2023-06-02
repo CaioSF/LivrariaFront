@@ -80,13 +80,13 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (data) {
-            $('#input-isbn').val(),
-            $('#input-nome').val(),
-            $('input-idioma').val(),
-            $('input-numeroPaginas').val(),
-            $('input-genero').val(),
-            $('input-autor').val(),
-            $('input-editora').val(),
+            $('#input-isbn').val(data.isbn),
+            $('#input-autor').val(data.autor),
+            $('#input-editora').val(data.editora),
+            $('#input-genero').val(data.genero),
+            $('#input-nome').val(data.nome),
+            $('#input-numeroPaginas').val(data.numeroPaginas),
+            $('#input-idioma').val(data.idioma),
             $("#input-dataLancamento").val(formatDate(new Date(data.dataLancamento)));
         }
     })
