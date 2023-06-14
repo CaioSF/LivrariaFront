@@ -16,8 +16,8 @@ function listarLivros() {
                 html += `<td>` + data.editora + `</td>`;
                 html += `<td>` + data.dataLancamento + `</td>`;
                 html += `<td><a href="editar-livro.html?id=` + data.id + `"><i class="bi bi-pencil-fill"></i></a>`;
-                html += ` <a href="visualizar-livro.html?id=` + data.id + `"><i class="bi bi-search"></i></a>`;
-                html += ` <a href="#" onclick="removerLivro(` + data.id + `)"><i class="bi bi-archive-fill"></i></a></td></tr>`;
+                html += ` <a href="visualizar-livro.html?id=` + data.id + `"><i class="bi bi-book"></i></a>`;
+                html += ` <a href="#" onclick="removerLivro(` + data.id + `)"><i class="bi bi-trash"></i></a></td></tr>`;
 
                 $("#tbListarLivrosBody").html(html);
             });

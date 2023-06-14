@@ -20,19 +20,19 @@
 <body>
 
     <!-- Menu topo -->
-    <nav class="navbar bg-primary px-3 mb-3">
+    <nav class="navbar bg-dark px-3 mb-3">
         <a class="navbar-brand text-light" href="../index.html">SCL</a>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link bg-dark text-light " aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="visualizar-livro.html">Livros</a>
+                <a class="nav-link bg-dark text-light" aria-current="page" href="listar-livro.html">Livros</a>
             </li>
-            <a class="nav-link active" href="../index.html">sair</a>
+            <a class="nav-link bg-dark text-light" href="../index.html">sair</a>
         </ul>
     </nav>
-    
+
     
     <div class="container p-lg-0">
 
@@ -42,24 +42,24 @@
         <a class="close" onclick="esconderAlert()">×</a>
     </div>
 
-    <form id="form-inserir-livro" action="listar-livros.html">
+    <form id="form-inserir-livro" action="listar-livro.html">
 
         <div class="form-group">
             <label for="input-isbn">ISBN</label>
-            <input type="text" class="form-control" id="input-isbn" placeholder="isbn" maxlength="13" minlength="13">
+            <input type="text" class="form-control shadow-lg p-3" id="input-isbn" placeholder="isbn" maxlength="13" minlength="13">
         </div>
 
         <div class="form-group">
             <label for="input-autor">Autor</label>
-            <input type="text" class="form-control" id="input-autor" placeholder="Nome do Autor">
+            <input type="text" class="form-control shadow-lg p-3" id="input-autor" placeholder="Nome do Autor">
         </div>
 
         <div class="form-group">
             <label for="input-editora">Editora</label>
-            <input type="text" class="form-control" id="input-editora" placeholder="Editora">
+            <input type="text" class="form-control shadow-lg p-3" id="input-editora" placeholder="Editora">
         </div>
-        <div class="form-group"><label for="input-genero" class="form-group">Gênero</label>
-            <input class="form-control" list="datalistOptions" id="input-genero" placeholder="Digite o gênero">
+        <div class="form-group"><label for="input-genero" class="form-group ">Gênero</label>
+            <input class="form-control shadow-lg p-3" list="datalistOptions" id="input-genero" placeholder="Digite o gênero">
             <datalist id="datalistOptions">
                 <option value="Ficção">
                 <option value="Não-Ficção">
@@ -71,24 +71,25 @@
 
         <div class="form-group">
             <label for="input-nome">Nome</label>
-            <input type="text" class="form-control" id="input-nome" placeholder="Nome do Livro">
+            <input type="text" class="form-control shadow-lg p-3" id="input-nome" placeholder="Nome do Livro">
         </div>
         <div class="form-group">
             <label for="input-numeroPaginas">Páginas</label>
-            <input type="number" class="form-control" id="input-numeroPaginas" placeholder="Páginas">
+            <input type="number" class="form-control shadow-lg p-3" id="input-numeroPaginas" placeholder="Páginas">
         </div>
         <div class="form-group">
+            
             <label for="input-idioma">Idioma</label>
-            <input type="text" class="form-control" id="input-idioma" placeholder="Idioma">
+            <input type="text" class="form-control shadow-lg p-3" id="input-idioma" placeholder="Idioma">
         </div>
-
+       
         <div class="form-group">
             <label for="input-dataLancamento">Data de Publicação</label>
-            <input class="form-control" type="date" id="input-dataLancamento">
+            <input class="form-control shadow-lg p-3" type="date" id="input-dataLancamento">
 
             <hr>
-            <a class="btn btn-secondary" href="../index.html"" role=" button">Voltar</a>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a class="btn btn-danger" href="../index.html"" role=" button">Voltar</a>
+            <button type="submit" class="btn bg-dark text-light">Salvar</button>
 
     </form>
 
@@ -111,6 +112,7 @@
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
 
     <script src="../js/incluir-livro.js"></script>
+  
 
 </body>
 

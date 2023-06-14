@@ -13,8 +13,10 @@ $('#form-inserir-livro').submit(function (event) {
         'nome': $('#input-nome').val(),
         'numeroPaginas': $('#input-numeroPaginas').val(),
         'idioma': $('#input-idioma').val(),
+        'fotoCapa': $('#picture__input').val(),
         'dataCadastro': new Date().toISOString(),
         'dataLancamento': dataLancamento.toISOString(),
+        
     };
 
     console.log(JSON.stringify(formData));

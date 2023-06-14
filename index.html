@@ -13,17 +13,17 @@
 
 <body>
     <!-- Menu topo -->
-    <nav class="navbar bg-primary px-3 mb-3">
+    <nav class="navbar bg-dark px-3 mb-3">
         <a class="navbar-brand text-light" href="../index.html">SCL</a>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link bg-dark text-bg-secondary" aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/livro/listar-livro.html">Livros</a>
+                <a class="nav-link bg-dark text-bg-secondary" aria-current="page" href="/livro/listar-livro.html">Livros</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button"
+                <a class="nav-link dropdown-toggle text-light bg-dark" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Login/Logout</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#scrollspyHeading3">Login</a></li>
@@ -42,15 +42,17 @@
                 
                 <div>
                     <div class="card">
-                        <img src=livros.png = "card-img-top" alt="...">
+                        <img  src=livros.png = "card-img-top" alt="...">
                       
-                        <div class="card-body">
+                        <div class="card-body  ">
                           <h5 class="card-title">Livros</h5>
                           <p class="card-text">Gerenciamento de livros</p>
-                          <div>Quantidade de Livros:</div>
-                          <div id="div-total-livros" style="padding: 10px;">
+                          <ul>
+                          <div class="d-inline p-2 ">Quantidade de Livros:</div>
+                          <div class="d-inline p-2"  id="div-total-livros" style="padding: 10px;">
+                          </ul> 
                         </div>
-                          <a href="livro/incluir-livro.html" class="btn btn-primary">Cadastrar Livro</a>
+                          <a href="livro/incluir-livro.html" class="btn btn-secondary bg-dark l border-dark ">Cadastrar Livro</a>
                         </div>
                       </div>
                       

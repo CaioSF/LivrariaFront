@@ -18,10 +18,11 @@ $('#form-editar-livro').submit(function (event) {
 
     event.preventDefault();
 
-    nascimento = new Date($('#input-nascimento').val());
+    dataLancamento = new Date($('#input-dataLancamento').val());
 
     //Criar formData
     var formData = {
+        'id' :id_livro,
         'isbn': $('#input-isbn').val(),
         'autor': $('#input-autor').val(),
         'editora': $('#input-editora').val(),
@@ -45,7 +46,7 @@ $('#form-editar-livro').submit(function (event) {
         data: JSON.stringify(formData),
         dataType: 'json',
         success: function (data) {
-            location.href = 'listar-livros.html';
+            location.href = 'listar-livro.html';
         },
         error: function (data) {
             $('#div-alert-message').prepend(data.responseText);

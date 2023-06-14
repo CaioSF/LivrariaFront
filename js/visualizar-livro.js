@@ -42,9 +42,13 @@ $(document).ready(function () {
             $("#input-genero").val(data.genero);
             $("#input-editora").val(data.editora);
             $("#input-numeroPaginas").val(data.numeroPaginas);
+            $("#picture__input").val(data.picture__input);
             $("#input-dataLancamento").val(formatDate(new Date(data.dataLancamento)));
+            
 
         }
+
+        
     })
 
 });
